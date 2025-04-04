@@ -34,7 +34,10 @@ public class Main {
         String nome = scanner.nextLine();
         System.out.print("Digite sua matrícula: ");
         int matricula = scanner.nextInt();
-        Cliente cliente = new Cliente(nome, matricula);
+        scanner.nextLine();
+        System.out.print("Digite seu cpf: ");
+        String cpf = scanner.nextLine();
+        Cliente cliente = new Cliente(nome, matricula, cpf);
 
         double totalCompra = 0;
         int opcao;
@@ -77,6 +80,7 @@ public class Main {
 
         System.out.println("\nResumo da Compra");
         System.out.println("Cliente: " + cliente.getNome());
+        System.out.println("CPF do cliente: " + cliente.getCpf());
         System.out.println("Total da compra: R$" + totalCompra);
 
         scanner.close();
